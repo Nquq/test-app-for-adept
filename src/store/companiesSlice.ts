@@ -76,8 +76,10 @@ const companiesSlice = createSlice({
         state.isLoading = true
       })
       .addCase(getCompanies.fulfilled, (state, action) => {
-        state.page = action.payload!.newPage
-        state.companies = [...state.companies, ...action.payload!.newCompanies!]
+        const { newPage, newCompanies } = action.payload!
+
+        state.page = newPage
+        state.companies = [...state.companies, ...newCompanies]
         state.isLoading = false
       })
       .addCase(getCompanies.rejected, state => {
