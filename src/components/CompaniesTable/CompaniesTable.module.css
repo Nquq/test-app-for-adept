@@ -1,0 +1,43 @@
+.container {
+  padding: 20px 20px 0 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tableHeaderRow {
+  background-color: #4caf50;
+  color: #282c34;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tableRow {
+  transition: background-color 0.3s;
+}
+
+.selected {
+  background-color: #e8f5e9;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+td[contenteditable='true'] {
+  outline: none;
+  cursor: text;
+}
+
+td[contenteditable='true']:focus {
+  background-color: #f1f8e9;
+}
